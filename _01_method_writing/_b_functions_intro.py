@@ -7,17 +7,25 @@ import unittest
 
 
 # TODO Write function definitions below!
+def multiply(factor,factor2):
+    return factor * factor2
 
-
+def str_cat(var1, var2, var3):
+    return var1 + var2 + var3
+def greater_than(first,second):
+    return second > first
+def get_random_number(low, high):
+    return random.randint(low,high)
 class FunctionTests(unittest.TestCase):
 
     # TODO 1) Write a function definition for multiply
+
     def test_1(self):
         self.assertEqual(100, multiply(10, 10))
 
     # TODO 2) Write a function definition for str_cat
     def test_2(self):
-        self.assertEqual('Welcome to Python', str_cat(var1='Welcome', var2='to', var3='Python'))
+        self.assertEqual('Welcome to Python', str_cat(var1='Welcome ', var2='to ', var3='Python'))
 
     # TODO 3) Write a function definition for greater_than
     def test_3(self):

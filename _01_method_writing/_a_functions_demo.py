@@ -67,7 +67,7 @@ if __name__ == '__main__':
 
     # It's possible to only label some of the inputs of a function call, but
     # once an input variable is labeled all the inputs that come after must
-    # also be labeled. For example:
+    # also be labeled. For example
     #function_2(7, var2=8, var3=9)   # works
     #function_2(var1=4, var2=5, 6)   # doesn't work
 
