@@ -7,6 +7,15 @@ from tkinter import messagebox, simpledialog, Tk
 
 
 if __name__ == '__main__':
+    number1 = 0
+    number2 = 1
+    sum = number1 + number2
+    for i in range(6):
+        print(number1)
+        print(number2)
+        number1 += number2
+        number2 += number1
+
     # TODO)
     #  here is more than one way to code a solution to this.
     #  The following steps give you some guidelines for one of them.

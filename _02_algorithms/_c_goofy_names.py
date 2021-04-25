@@ -5,6 +5,20 @@ from tkinter import messagebox, simpledialog, Tk
 
 
 if __name__ == '__main__':
+    window = Tk()
+    window.withdraw()
+
+    name = simpledialog.askstring(None,"What is your name?")
+    goofyName = ""
+    for i in range(len(name)):
+        if i % 2 == 0:
+            goofyName += name[i].upper()
+        else:
+            goofyName += name[i].lower()
+
+    messagebox.showinfo("","Your goofy name is " + str(goofyName))
+
+
     # TODO)
     #  1. Ask the user to enter their name.
     #  2. Use a loop to alternately modify each character of the name into

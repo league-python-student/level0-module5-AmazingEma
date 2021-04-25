@@ -2,9 +2,34 @@
 Have the turtle draw a row of houses.
 """
 from tkinter import messagebox, simpledialog, Tk
-
+import turtle
+import random
 
 if __name__ == '__main__':
+    t = turtle.Turtle()
+    def draw_house(height):
+        if height == 1:
+            height = 60
+        elif height == 2:
+            height = 120
+        else:
+            height = 250
+        for i in range(4):
+
+            t.forward(height)
+            t.left(90)
+        t.forward(height)
+        t.color("green")
+        t.pensize(10)
+        t.forward(10)
+        t.color("black")
+        t.pensize(1)
+    t.penup()
+    t.goto(-600, 0)
+    t.pendown()
+    for i in range (10):
+        s = random.randint(1,3)
+        draw_house(s)
     # TODO)
     #   1) Move the turtle to the left side of the window near the bottom.
     #   2) Draw ONE flat-topped house with height=100 and green grass after it.
@@ -25,4 +50,5 @@ if __name__ == '__main__':
     #      (JUST the roof part): draw_pointy_roof, draw_flat_roof
     #   11) By calling the correct "roof" function, make large houses have
     #      flat roofs and all the others have pointy roofs.
+    turtle.done()
     pass
