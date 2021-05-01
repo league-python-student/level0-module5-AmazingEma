@@ -4,19 +4,41 @@ Go to the recipe to run the demonstration before starting this program
 
 def setup():
     # Set the size of your sketch to be a rectangle like in the recipe demonstration
-    
+    size(800,600)
     rect(600, 300,0,0)
     noFill()
     # Call the noFill() command so all the ellipses will be transparent
-
+    global x 
+    global xx
+    x = 0
+    xx = 800
 def draw():
     # Use a for loop to make the first set of rings that will start in the left half
     # of the window.
-    x = 0
+    global x 
+    global xx
+    y = 5
+    speed = 10
+    x +=2
+    xx -=2
+    
+    background (255)
+    #for i in range (10):
+        
+        #x += speed
     for i in range(50):
         
-        ellipse(x,360,0,0)
-        x +=2
+        ellipse(x,300,y,y)
+        
+        ellipse(xx,300,y,y)
+       
+        y += 10   
+    #or i in range (10):
+        #speed -= speed 
+       # xx += speed
+        
+       
+    
     
     # Make this set of rings move across the sketch to the right 
     # Hint: Make two variables, one for x and another for the speed. 
