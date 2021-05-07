@@ -37,12 +37,41 @@ if __name__ == '__main__':
         b = i + 2
         c = i + 3
         print(str(a) + " " + str(b) + " " + str(c))
-    for i in range(100):
-        k = i + 1
-        print(k, end = '')
-        for q in range(10):
 
-            if q % 10 == 0:
+
+    for i in range(101):
+
+        print(i, end = ' ')
+        if i % 10 == 0:
+            print()
+    for i in range(6):
+        print(" * ", end = " ")
+        if i > 0:
+            print(" * ", end=" ")
+            if i > 1:
+                print(" * ", end=" ")
+                if i > 2:
+                    print(" * ", end=" ")
+                    if i > 3:
+                        print(" * ", end=" ")
+                        if i > 4:
+                            print(" * ", end=" ")
+                            if i > 5:
+                                print(" * ", end=" ")
+                            else:
+                                print()
+                        else:
+                            print()
+                    else:
+                        print()
+                else:
+                    print()
+            else:
                 print()
+        else:
+            print()
+
+
+
 
     pass
